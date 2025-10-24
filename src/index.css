@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design System — Dellatorre Colors (HSL format)
+   Azul Escuro: principal
+   Azul Profundo: destaque
+   Azul Claro: detalhes
+   Branco: base
+*/
+
+@layer base {
+  :root {
+    /* ======= Brand Colors ======= */
+    --white: 0 0% 100%;
+    /* #ffffff - Clareza e profissionalismo */
+    --blue-light: 200 69% 61%;
+    /* #57b4e2 - Detalhes e modernidade */
+    --blue-dark: 203 82% 34%;
+    /* #0f6b9e - Cor principal, estabilidade e contraste */
+    --dellatorre-yellow: 200 69% 61%;
+    /* #FFC107 - Energia e atenção */
+    --blue-deep: 222 44% 15%;
+    /* #162139 - Destaques, segurança e autoridade */
+
+    /* ======= Semantic Tokens ======= */
+    --background: var(--white);
+    --foreground: var(--blue-deep);
+
+    --card: var(--white);
+    --card-foreground: var(--blue-deep);
+
+    --popover: var(--white);
+    --popover-foreground: var(--blue-deep);
+
+    --primary: var(--blue-dark);
+    /* Azul Escuro (principal) */
+    --primary-foreground: var(--white);
+
+    --secondary: var(--blue-light);
+    /* Azul Claro (detalhes e contrastes) */
+    --secondary-foreground: var(--white);
+
+    --accent: var(--blue-deep);
+    /* Azul Profundo (destaque visual) */
+    --accent-foreground: var(--white);
+
+    --muted: 0 0% 90%;
+    --muted-foreground: var(--blue-dark);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: var(--white);
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: var(--blue-dark);
+
+    --radius: 0.5rem;
+
+    /* ======= Custom Design Tokens ======= */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--blue-dark)) 0%, hsl(var(--blue-light)) 100%);
+    --gradient-diagonal: linear-gradient(45deg, hsl(var(--blue-dark)) 0%, hsl(var(--blue-deep)) 100%);
+    --shadow-card: 0 4px 12px -2px hsl(var(--blue-dark) / 0.1);
+    --shadow-hover: 0 8px 24px -4px hsl(var(--blue-dark) / 0.2);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .diagonal-line {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .diagonal-line::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(45deg, hsl(var(--blue-light)), hsl(var(--blue-deep)));
+    transform: skewX(-45deg);
+    left: -20px;
+  }
+
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+  }
+}
