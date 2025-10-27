@@ -84,10 +84,10 @@ const Navbar = () => {
               ))}
               <Button
                 asChild
-                className="bg-[hsl(var(--dellatorre-yellow))] text-primary hover:bg-[hsl(var(--dellatorre-yellow))]/90 font-montserrat font-semibold"
+                className="ml-4 bg-[hsl(var(--blue-deep))] text-white hover:bg-[hsl(var(--blue-deep))]/80 font-montserrat font-semibold transition-colors duration-300"
               >
-                <a href="https://wa.me/5518998060024" target="_blank" rel="noopener noreferrer">
-                  Solicitar Orçamento
+                <a href="https://wa.link/ua64nw" target="_blank" rel="noopener noreferrer">
+                  Solicitar Cotação
                 </a>
               </Button>
             </div>
