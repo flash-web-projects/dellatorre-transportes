@@ -2,8 +2,15 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Satellite, Lock, TrendingDown, Bell, FileCheck } from "lucide-react";
+import { useEffect } from "react";
 
 const Tecnologia = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   const partners = [
     {
       name: "Buonny",

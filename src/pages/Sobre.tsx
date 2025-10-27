@@ -186,18 +186,18 @@ const Sobre = () => {
               viewport={{ once: true }}
               className="space-y-6 text-lg font-poppins text-muted-foreground leading-relaxed"
             >
-              <p>
+              <p className="text-justify">
                 A <strong>Dellatorre Transportes</strong> foi fundada em 2023, mas nossa história começou muito antes.
                 Com mais de 15 anos de experiência do nosso diretor no setor de transporte e logística,
                 a empresa nasceu da vontade de criar algo maior: uma operação que unisse expertise técnica,
                 tecnologia de ponta e, acima de tudo, compromisso humano.
               </p>
-              <p>
+              <p className="text-justify">
                 Desde o início, estabelecemos nossa sede no interior de São Paulo com visão nacional.
                 Atendemos diversos segmentos — da construção civil ao agronegócio, de hospitais a grandes
                 eventos — sempre com o mesmo compromisso: levar movimento, confiança e segurança a cada destino.
               </p>
-              <p>
+              <p className="text-justify">
                 Cada entrega não é apenas logística. É uma história de parceria, responsabilidade e inovação.
                 É o resultado de planejamento detalhado, equipe qualificada e tecnologia aplicada.
               </p>

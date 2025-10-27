@@ -8,8 +8,14 @@ import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, Instagram, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useEffect } from "react";
 
 const Contato = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",

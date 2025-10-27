@@ -9,8 +9,15 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const Faq = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   const faqs = [
     {
       question: "Qual é a área de atuação da Dellatorre Transportes?",

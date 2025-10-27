@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-10 pb-10">
       {/* Background Image com Overlay */}
       <motion.div
         className="absolute inset-0 z-0"
@@ -16,7 +16,7 @@ const Hero = () => {
         <img
           src={heroImage}
           alt="Transporte Dellatorre - Rodovias e logística"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-[55%_center] sm:object-center"
         />
       </motion.div>
 
@@ -65,7 +65,7 @@ const Hero = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
-            className="text-xl md:text-2xl text-primary/90 mb-8 font-poppins font-light leading-relaxed"
+            className="text-xl md:text-2xl text-primary/90 mb-8 font-poppins font-light leading-relaxed mr-20"
           >
             Transportadora e locadora de equipamentos com excelência operacional.
             Levamos movimento, confiança e segurança a cada destino.
@@ -131,17 +131,6 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Animated Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5, delay: 1.5 }}
-      >
-        <div className="w-6 h-10 border-2 border-primary-foreground/50 rounded-full flex justify-center pt-2 animate-bounce">
-          <div className="w-1 h-3 bg-primary-foreground/50 rounded-full"></div>
-        </div>
-      </motion.div>
     </section>
   );
 };

@@ -9,8 +9,15 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useEffect } from "react";
 
 const Servicos = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   const transportServices = [
     {
       icon: Building2,
